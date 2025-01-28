@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirkusz Jegyvásárlás</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px;
+            font-size: 2.5em;
+            color: #ff6f61;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .form-container {
+            width: 70%;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #e55550;
+        }
+        .footer {
+            text-align: center;
+            margin: 30px;
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jegyvásárlás</h1>
+    <div class="form-container">
+        <form>
+            <label for="date">Válassz dátumot:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="category">Jegykategória:</label>
+            <select id="category" name="category" required>
+                <option value="child">Gyermek (0-12 év) - 2500 HUF</option>
+                <option value="student">Diák (12-18 év) - 3500 HUF</option>
+                <option value="adult">Felnőtt (18-60 év) - 5000 HUF</option>
+                <option value="senior">Nyugdíjas (60 év felett) - 3000 HUF</option>
+                <option value="family">Családi csomag (2 felnőtt + 2 gyermek) - 12000 HUF</option>
+            </select>
+
+            <label for="quantity">Jegyek száma:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+            <label for="name">Teljes név:</label>
+            <input type="text" id="name" name="name" placeholder="Add meg a neved" required>
+
+            <label for="email">Email cím:</label>
+            <input type="email" id="email" name="email" placeholder="Add meg az email címed" required>
+
+            <label for="phone">Telefonszám:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+36 20 123 4567" required>
+
+            <button type="submit">Jegyvásárlás</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>Cirkusz Kft. | 2024 © Minden jog fenntartva.</p>
+    </div>
+</body>
+</html>
